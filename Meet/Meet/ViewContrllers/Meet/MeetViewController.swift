@@ -13,7 +13,8 @@ class MeetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let featuresView = Features.init(frame: CGRect.init(x: 0, y: self.view.frame.height - 110, width: self.view.frame.width, height: 60))
+        self.view.addSubview(featuresView)
     }
     
 
