@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="cnO-HF-Lye" customClass="FeaturesItem" customModule="Meet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faceValue" translatesAutoresizingMaskIntoConstraints="NO" id="3YE-Ec-mxg">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美颜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0N-zi-c7j">
+                    <rect key="frame" x="0.0" y="40" width="60" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.3294117647" green="0.34901960780000002" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Z0N-zi-c7j" firstAttribute="bottom" secondItem="oYT-Qd-f9Y" secondAttribute="bottom" id="320-lG-0QS"/>
+                <constraint firstItem="3YE-Ec-mxg" firstAttribute="trailing" secondItem="oYT-Qd-f9Y" secondAttribute="trailing" id="9f5-fp-rrA"/>
+                <constraint firstItem="3YE-Ec-mxg" firstAttribute="leading" secondItem="oYT-Qd-f9Y" secondAttribute="leading" id="FP2-xS-60G"/>
+                <constraint firstItem="Z0N-zi-c7j" firstAttribute="trailing" secondItem="oYT-Qd-f9Y" secondAttribute="trailing" id="OaG-vA-3f0"/>
+                <constraint firstItem="Z0N-zi-c7j" firstAttribute="leading" secondItem="oYT-Qd-f9Y" secondAttribute="leading" id="SRO-En-vWc"/>
+                <constraint firstItem="oYT-Qd-f9Y" firstAttribute="bottom" secondItem="3YE-Ec-mxg" secondAttribute="bottom" constant="20" id="dsQ-5i-5xX"/>
+                <constraint firstItem="3YE-Ec-mxg" firstAttribute="top" secondItem="oYT-Qd-f9Y" secondAttribute="top" id="h4X-M0-e8L"/>
+                <constraint firstItem="Z0N-zi-c7j" firstAttribute="top" secondItem="3YE-Ec-mxg" secondAttribute="bottom" id="ypY-qZ-pza"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="oYT-Qd-f9Y"/>
+            <connections>
+                <outlet property="imageView" destination="3YE-Ec-mxg" id="vct-lY-OiT"/>
+                <outlet property="label" destination="Z0N-zi-c7j" id="Yt5-Vx-h7X"/>
+            </connections>
+            <point key="canvasLocation" x="-86.400000000000006" y="-71.064467766116948"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="faceValue" width="128" height="128"/>
+    </resources>
+</document>
