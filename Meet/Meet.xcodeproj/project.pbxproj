@@ -22,6 +22,12 @@
 		60E597C6219038BD007D589B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60E597C5219038BD007D589B /* Assets.xcassets */; };
 		60E597C9219038BD007D589B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E597C7219038BD007D589B /* LaunchScreen.storyboard */; };
 		984F885C1AD9254DD554E595 /* libPods-Meet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B715A7CA26C3F82D5B1A8EF4 /* libPods-Meet.a */; };
+		CD7C7C4C21A4F38700413D0E /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7C4B21A4F38700413D0E /* GridFlowLayout.swift */; };
+		CD7C7C4F21A4F5B200413D0E /* GridFlowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7C4D21A4F5B200413D0E /* GridFlowVC.swift */; };
+		CD7C7C5021A4F5B200413D0E /* GridFlowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7C7C4E21A4F5B200413D0E /* GridFlowVC.xib */; };
+		CD7C7C5321A4F68500413D0E /* MeetHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7C5121A4F68500413D0E /* MeetHomeCell.swift */; };
+		CD7C7C5421A4F68500413D0E /* MeetHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7C7C5221A4F68500413D0E /* MeetHomeCell.xib */; };
+		CD7C7C5721A5314D00413D0E /* MeetItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7C5621A5314D00413D0E /* MeetItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +51,12 @@
 		60E597CA219038BD007D589B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7951CA5D42A191DBCD666208 /* Pods-Meet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet/Pods-Meet.release.xcconfig"; sourceTree = "<group>"; };
 		B715A7CA26C3F82D5B1A8EF4 /* libPods-Meet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Meet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD7C7C4B21A4F38700413D0E /* GridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFlowLayout.swift; sourceTree = "<group>"; };
+		CD7C7C4D21A4F5B200413D0E /* GridFlowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFlowVC.swift; sourceTree = "<group>"; };
+		CD7C7C4E21A4F5B200413D0E /* GridFlowVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridFlowVC.xib; sourceTree = "<group>"; };
+		CD7C7C5121A4F68500413D0E /* MeetHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetHomeCell.swift; sourceTree = "<group>"; };
+		CD7C7C5221A4F68500413D0E /* MeetHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeetHomeCell.xib; sourceTree = "<group>"; };
+		CD7C7C5621A5314D00413D0E /* MeetItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,7 @@
 		608FE00021903E9200236780 /* Meet */ = {
 			isa = PBXGroup;
 			children = (
+				CD7C7C5521A5311D00413D0E /* Models */,
 				608FE01A21907EEA00236780 /* Views */,
 				608FE004219040FE00236780 /* MeetViewController.swift */,
 			);
@@ -124,6 +137,7 @@
 		608FE01A21907EEA00236780 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CD7C7C4A21A4F2FE00413D0E /* GridLayout */,
 				608FE021219084A800236780 /* FeaturesItem.swift */,
 				608FE01F21907F7800236780 /* FeaturesItem.xib */,
 				608FE01B21907F3200236780 /* Features.swift */,
@@ -161,6 +175,26 @@
 				60E597CA219038BD007D589B /* Info.plist */,
 			);
 			path = Meet;
+			sourceTree = "<group>";
+		};
+		CD7C7C4A21A4F2FE00413D0E /* GridLayout */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C7C4B21A4F38700413D0E /* GridFlowLayout.swift */,
+				CD7C7C4D21A4F5B200413D0E /* GridFlowVC.swift */,
+				CD7C7C4E21A4F5B200413D0E /* GridFlowVC.xib */,
+				CD7C7C5121A4F68500413D0E /* MeetHomeCell.swift */,
+				CD7C7C5221A4F68500413D0E /* MeetHomeCell.xib */,
+			);
+			path = GridLayout;
+			sourceTree = "<group>";
+		};
+		CD7C7C5521A5311D00413D0E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C7C5621A5314D00413D0E /* MeetItemModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D7FD6EAFBFEA20E663A08A7E /* Pods */ = {
@@ -242,7 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				608FE02021907F7800236780 /* FeaturesItem.xib in Resources */,
+				CD7C7C5421A4F68500413D0E /* MeetHomeCell.xib in Resources */,
 				60E597C9219038BD007D589B /* LaunchScreen.storyboard in Resources */,
+				CD7C7C5021A4F5B200413D0E /* GridFlowVC.xib in Resources */,
 				60E597C6219038BD007D589B /* Assets.xcassets in Resources */,
 				60E597C4219038BC007D589B /* Main.storyboard in Resources */,
 			);
@@ -296,7 +332,10 @@
 			files = (
 				608FE01C21907F3200236780 /* Features.swift in Sources */,
 				608FE00D2190424200236780 /* MainViewController.swift in Sources */,
+				CD7C7C4F21A4F5B200413D0E /* GridFlowVC.swift in Sources */,
+				CD7C7C5721A5314D00413D0E /* MeetItemModel.swift in Sources */,
 				60E597C1219038BC007D589B /* ViewController.swift in Sources */,
+				CD7C7C4C21A4F38700413D0E /* GridFlowLayout.swift in Sources */,
 				608FE005219040FE00236780 /* MeetViewController.swift in Sources */,
 				60E597BF219038BC007D589B /* AppDelegate.swift in Sources */,
 				608FE0092190411600236780 /* NewsViewController.swift in Sources */,
@@ -304,6 +343,7 @@
 				608FE022219084A800236780 /* FeaturesItem.swift in Sources */,
 				608FE0072190410B00236780 /* ShowViewController.swift in Sources */,
 				608FE00B2190412100236780 /* MineViewController.swift in Sources */,
+				CD7C7C5321A4F68500413D0E /* MeetHomeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
