@@ -15,8 +15,4 @@ struct MeetItemModel{
     let imageUrl:String?
 //    let watchCount:Int?
 
-//    init(desc:String?,name:String?,imageUrl:String?) {
-//        return MeetItemModel(desc: desc, name: name, imageUrl: imageUrl)
-//    }
-
 }

@@ -33,7 +33,7 @@ class GridFlowLayout: UICollectionViewFlowLayout {
 
     }
 
-    var items = [UIImage]()
+    var items = [MeetItemModel]()
     var layoutType:LayoutType = .twoColumn
     fileprivate lazy var layoutAttributes:[String:[UICollectionViewLayoutAttributes]] = {
         return [String:[UICollectionViewLayoutAttributes]]()
@@ -89,7 +89,7 @@ class GridFlowLayout: UICollectionViewFlowLayout {
         var attributes = [UICollectionViewLayoutAttributes]()
 
         var row = 0
-        for item in items {
+        for _ in items {
             // 建立一個attribute
             let indexPath = IndexPath.init(row: row, section: 0)
             let attribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
@@ -104,17 +104,17 @@ class GridFlowLayout: UICollectionViewFlowLayout {
             let itemY = minHeight
 
             // 計算高度，按照原圖片大小等比例縮放
-            var itemHeight = item.size.height * itemWidth / item.size.width
+//            var itemHeight = item.size.height * itemWidth / item.size.width
 
-            // 先覆盖高度
-            itemHeight = 260
+
+            let itemHeight = 260
 
             // 設定Frame，加入到attributes中
             attribute.frame = CGRect(x: itemX, y: CGFloat(itemY), width: itemWidth, height: CGFloat(itemHeight))
             attributes.append(attribute)
 
             // 計算最短的column當前的高度
-            columnHeights[minHeightColumn] += itemHeight + minimumLineSpacing
+            columnHeights[minHeightColumn] += CGFloat(itemHeight) + minimumLineSpacing
 
             row += 1
         }

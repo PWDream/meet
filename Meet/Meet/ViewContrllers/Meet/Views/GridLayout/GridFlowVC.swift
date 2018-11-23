@@ -13,7 +13,7 @@ class GridFlowVC: UIViewController {
     @IBOutlet var aCollectionView: UICollectionView!
     @IBOutlet weak var flowLayout: GridFlowLayout!
 
-    var items = [UIImage]()
+    var items = [MeetItemModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,22 +28,12 @@ class GridFlowVC: UIViewController {
         aCollectionView.register(meetHomeNib, forCellWithReuseIdentifier: "MeetHomeCell")
 
         // 產生1000個圖片，圖片檔案從bg-0到bg-57
-        var pos = 0
-        for _ in 1...100 {
-
-//            let meetItemModel = MeetItemModel()
-
-            if let image = UIImage(named: "bg-\(pos)") {
-                items.append(image)
-            }
-
-            pos += 1
-            if pos == 58 {
-                pos = 0
-            }
-
+        var index = 0
+        for _ in 1...1000 {
+            let meetItemModel = MeetItemModel(desc: "Hello\(index)",name:"PW\(index)",imageUrl:"bg-\(index % 57)")
+            items.append(meetItemModel)
+            index += 1
         }
-
         flowLayout.items = items
         aCollectionView.collectionViewLayout = flowLayout
     }
@@ -64,7 +54,10 @@ extension GridFlowVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let aCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeetHomeCell", for: indexPath) as! MeetHomeCell
-        aCell.imageView.image = items[indexPath.row]
+        let meetItem = items[indexPath.row]
+        aCell.imageView.image = UIImage(named:meetItem.imageUrl!)
+        aCell.nameLabel.text = meetItem.name
+        aCell.despLabel.text = meetItem.desc
         return aCell
 
     }
