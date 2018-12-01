@@ -23,6 +23,8 @@ class MeetHomeCell: UICollectionViewCell {
     public var meetItem:MeetItemModel?{
         didSet{
             imageView.image = UIImage(named: (meetItem?.imageUrl)!)
+            despLabel.text = meetItem?.desc
+            nameLabel.text = meetItem?.name
         }
     }
 

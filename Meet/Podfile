@@ -1,5 +1,6 @@
 platform :ios,'8.0'
 target 'Meet' do
+use_frameworks！
 
 pod 'Alamofire', '~> 4.7.3'
 pod 'SDWebImage', '~> 4.4.2'
@@ -9,5 +10,7 @@ pod 'MJRefresh', '~>3.1.15.3'
 pod 'MJExtension', '~>3.0.15.1'
 pod 'BlocksKit', '~> 2.2.5'
 pod 'SwiftyJSON', '~> 4.0'
+pod 'SVProgressHUD', '~> 2.2.5'
+
 
 end

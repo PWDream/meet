@@ -28,6 +28,9 @@
 		CD7C7C5321A4F68500413D0E /* MeetHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7C5121A4F68500413D0E /* MeetHomeCell.swift */; };
 		CD7C7C5421A4F68500413D0E /* MeetHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7C7C5221A4F68500413D0E /* MeetHomeCell.xib */; };
 		CD7C7C5721A5314D00413D0E /* MeetItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7C5621A5314D00413D0E /* MeetItemModel.swift */; };
+		CD7C7C5C21A7EA0B00413D0E /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7C5B21A7EA0B00413D0E /* MessageViewController.swift */; };
+		CD7C7C6921A7F79F00413D0E /* NetBaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7C6821A7F79F00413D0E /* NetBaseUrl.swift */; };
+		CD7C7C6B21A7F7C800413D0E /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7C6A21A7F7C800413D0E /* NetworkTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,10 @@
 		CD7C7C5121A4F68500413D0E /* MeetHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetHomeCell.swift; sourceTree = "<group>"; };
 		CD7C7C5221A4F68500413D0E /* MeetHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeetHomeCell.xib; sourceTree = "<group>"; };
 		CD7C7C5621A5314D00413D0E /* MeetItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetItemModel.swift; sourceTree = "<group>"; };
+		CD7C7C5B21A7EA0B00413D0E /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		CD7C7C6821A7F79F00413D0E /* NetBaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetBaseUrl.swift; sourceTree = "<group>"; };
+		CD7C7C6A21A7F7C800413D0E /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
+		CD7C7C6C21A7FD3300413D0E /* Meet-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meet-Bridging.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				608FE00021903E9200236780 /* Meet */,
+				CD7C7C5A21A7E9C300413D0E /* Message */,
 				608FE00121903EAF00236780 /* Show */,
 				608FE002219040BC00236780 /* News */,
 				608FE003219040C400236780 /* Mine */,
 				608FDFFF21903E6000236780 /* MainViewController */,
-				608FE010219056E400236780 /* Utilities */,
 			);
 			path = ViewContrllers;
 			sourceTree = "<group>";
@@ -167,12 +174,15 @@
 			isa = PBXGroup;
 			children = (
 				608FDFFE21903E3C00236780 /* ViewContrllers */,
+				CD7C7C6421A7F71000413D0E /* DataManager */,
+				608FE010219056E400236780 /* Utilities */,
 				60E597BE219038BC007D589B /* AppDelegate.swift */,
 				60E597C0219038BC007D589B /* ViewController.swift */,
 				60E597C2219038BC007D589B /* Main.storyboard */,
 				60E597C5219038BD007D589B /* Assets.xcassets */,
 				60E597C7219038BD007D589B /* LaunchScreen.storyboard */,
 				60E597CA219038BD007D589B /* Info.plist */,
+				CD7C7C6C21A7FD3300413D0E /* Meet-Bridging.h */,
 			);
 			path = Meet;
 			sourceTree = "<group>";
@@ -195,6 +205,47 @@
 				CD7C7C5621A5314D00413D0E /* MeetItemModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CD7C7C5A21A7E9C300413D0E /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C7C5B21A7EA0B00413D0E /* MessageViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		CD7C7C6421A7F71000413D0E /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C7C6521A7F71F00413D0E /* NetManager */,
+				CD7C7C6721A7F73300413D0E /* FileManager */,
+				CD7C7C6621A7F72900413D0E /* DBManager */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		CD7C7C6521A7F71F00413D0E /* NetManager */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C7C6821A7F79F00413D0E /* NetBaseUrl.swift */,
+				CD7C7C6A21A7F7C800413D0E /* NetworkTool.swift */,
+			);
+			path = NetManager;
+			sourceTree = "<group>";
+		};
+		CD7C7C6621A7F72900413D0E /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		CD7C7C6721A7F73300413D0E /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FileManager;
 			sourceTree = "<group>";
 		};
 		D7FD6EAFBFEA20E663A08A7E /* Pods */ = {
@@ -313,10 +364,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Meet/Pods-Meet-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -330,13 +383,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7C7C6921A7F79F00413D0E /* NetBaseUrl.swift in Sources */,
 				608FE01C21907F3200236780 /* Features.swift in Sources */,
 				608FE00D2190424200236780 /* MainViewController.swift in Sources */,
 				CD7C7C4F21A4F5B200413D0E /* GridFlowVC.swift in Sources */,
 				CD7C7C5721A5314D00413D0E /* MeetItemModel.swift in Sources */,
+				CD7C7C5C21A7EA0B00413D0E /* MessageViewController.swift in Sources */,
 				60E597C1219038BC007D589B /* ViewController.swift in Sources */,
 				CD7C7C4C21A4F38700413D0E /* GridFlowLayout.swift in Sources */,
 				608FE005219040FE00236780 /* MeetViewController.swift in Sources */,
+				CD7C7C6B21A7F7C800413D0E /* NetworkTool.swift in Sources */,
 				60E597BF219038BC007D589B /* AppDelegate.swift in Sources */,
 				608FE0092190411600236780 /* NewsViewController.swift in Sources */,
 				608FE0192190574D00236780 /* Const.swift in Sources */,
@@ -499,8 +555,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pw.dream.meet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Meet/Meet-Bridging.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -518,8 +576,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pw.dream.meet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Meet/Meet-Bridging.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

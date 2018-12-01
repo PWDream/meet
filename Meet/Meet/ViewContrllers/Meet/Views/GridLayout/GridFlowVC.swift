@@ -52,14 +52,9 @@ extension GridFlowVC: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
         let aCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeetHomeCell", for: indexPath) as! MeetHomeCell
-        let meetItem = items[indexPath.row]
-        aCell.imageView.image = UIImage(named:meetItem.imageUrl!)
-        aCell.nameLabel.text = meetItem.name
-        aCell.despLabel.text = meetItem.desc
+        aCell.meetItem = items[indexPath.row]
         return aCell
-
     }
 
 }
