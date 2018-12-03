@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UITabBar.appearance().tintColor = RGBCOLOR_HEX(h: 0xd81e06)
         UINavigationBar.appearance().tintColor = UIColor.gray
+        AMapServices.shared().apiKey = GAODEKEY
         return true
     }
 
