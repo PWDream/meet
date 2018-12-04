@@ -10,7 +10,8 @@
 #define Meet_Bridging_h
 
 #import <SVProgressHUD/SVProgressHUD.h>
-//#import "SVProgressHUD.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapLocationKit/AMapLocationKit.h>
 
 
 #endif /* Meet_Bridging_h */
